@@ -1,0 +1,100 @@
+---
+layout: ../../layouts/PageLayout.astro
+title: "Yusaku Nakajima | Software"
+description: "ロボット実験やラボラトリーオートメーションに関連する公開ソフトウェアです。"
+lang: "ja"
+---
+
+# Software
+
+このページでは、ロボット実験やラボラトリーオートメーションに関連する公開ソフトウェアをまとめています。
+
+## 粉体粉砕用 ROS パッケージ
+
+以下の論文で提案した手法を、これらのパッケージに実装しています。
+
+<div class="software-layout">
+  <figure class="profile-figure">
+    <a href="https://doi.org/10.1109/IROS47612.2022.9981081" target="_blank" rel="noreferrer">
+      <img class="profile-figure-image iros-figure" src="/images/iros2022_fig1.jpg" alt="IROS 2022 図1" />
+    </a>
+    <figcaption>
+      <strong>Robotic Powder Grinding with a Soft Jig for Laboratory Automation in Material Science</strong><br />
+      © 2022 IEEE. Reprinted, with permission, from Nakajima et al., IROS 2022.
+    </figcaption>
+  </figure>
+
+  <div class="software-links">
+    <ul>
+      <li>
+        <a href="https://github.com/quantumbeam/powder_grinding">powder_grinding</a><br />
+        粉体粉砕のロボット実験ワークフロー向け ROS パッケージです。
+      </li>
+      <li>
+        <a href="https://github.com/quantumbeam/powder_grinding_ros2">powder_grinding_ros2</a><br />
+        粉体粉砕のロボット実験ワークフロー向け ROS 2 パッケージです。
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>{`
+  .software-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .profile-figure {
+    flex: 0 1 280px;
+    margin: 0;
+    text-align: center;
+    max-width: 300px;
+  }
+
+  .software-links {
+    flex: 1 1 340px;
+  }
+
+  .software-links ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+
+  .software-links li + li {
+    margin-top: 1rem;
+  }
+
+  .profile-figure-image {
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .iros-figure {
+    width: auto;
+  }
+
+  @media (max-width: 720px) {
+    .software-layout {
+      gap: 1.25rem;
+    }
+
+    .profile-figure-image {
+      height: auto;
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  .profile-figure figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(var(--gray-dark), 0.8);
+  }
+`}</style>

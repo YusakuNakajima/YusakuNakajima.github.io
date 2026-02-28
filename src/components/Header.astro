@@ -4,18 +4,38 @@ import HeaderLink from './HeaderLink.astro';
 
 const pathname = Astro.url?.pathname ?? '/';
 const isJapanese = pathname === '/jp' || pathname.startsWith('/jp/');
-const languageHref = isJapanese ? '/' : '/jp/';
+const languageHref = isJapanese
+	? pathname === '/jp' || pathname === '/jp/'
+		? '/'
+		: pathname.replace(/^\/jp/, '')
+	: pathname === '/'
+		? '/jp/'
+		: `/jp${pathname}`;
+const homeHref = isJapanese ? '/jp/' : '/';
 const languageLabel = isJapanese ? 'EN' : 'JP';
 const languageAria = isJapanese ? 'Switch to English' : 'Switch to Japanese';
+const navLinks = isJapanese
+	? [
+			{ href: '/jp/', label: 'Home' },
+			{ href: '/jp/profile/', label: 'Profile' },
+			{ href: '/jp/public-materials/', label: '公開資料' },
+			{ href: '/jp/software/', label: 'Software' },
+		]
+	: [
+			{ href: '/', label: 'Home' },
+			{ href: '/profile/', label: 'Profile' },
+			{ href: '/public-materials/', label: 'Public Materials' },
+			{ href: '/software/', label: 'Software' },
+		];
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2><a href={homeHref}>{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<!-- <HeaderLink href="/blog">Blog</HeaderLink> -->
-			<!-- <HeaderLink href="/about">About</HeaderLink> -->
+			{navLinks.map((link) => (
+				<HeaderLink href={link.href}>{link.label}</HeaderLink>
+			))}
 		</div>
 		<div class="right-links">
 			<a class="lang-toggle" href={languageHref} aria-label={languageAria}>
