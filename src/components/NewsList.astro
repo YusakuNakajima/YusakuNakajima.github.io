@@ -1,0 +1,62 @@
+---
+import { newsItems } from '../data/news';
+
+type Props = {
+	lang?: 'en' | 'ja';
+	limit?: number;
+	moreHref?: string;
+	moreLabel?: string;
+};
+
+const { lang = 'en', limit, moreHref, moreLabel } = Astro.props;
+const items = typeof limit === 'number' ? newsItems.slice(0, limit) : newsItems;
+---
+
+<ul class="news-list">
+	{
+		items.map((item) => (
+			<li>
+				<span class="news-date">{lang === 'ja' ? item.dateJa : item.date}</span>
+				<Fragment set:html={lang === 'ja' ? item.htmlJa : item.html} />
+			</li>
+		))
+	}
+</ul>
+{
+	moreHref && moreLabel ? (
+		<p class="news-more">
+			<a href={moreHref}>{moreLabel}</a>
+		</p>
+	) : null
+}
+
+<style>
+	.news-list {
+		padding-left: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.news-list li {
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+
+	.news-date {
+		display: inline-block;
+		min-width: 6.5rem;
+		font-weight: 700;
+		color: rgb(var(--black));
+	}
+
+	.news-more {
+		margin: 0 0 2rem;
+	}
+
+	@media (max-width: 720px) {
+		.news-date {
+			display: block;
+			min-width: 0;
+			margin-bottom: 0.15rem;
+		}
+	}
+</style>
