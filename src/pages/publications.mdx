@@ -3,9 +3,8 @@ layout: ../layouts/PageLayout.astro
 title: "Yusaku Nakajima | Publications"
 description: "Publications, talks, awards, and other scholarly output by Yusaku Nakajima."
 lang: "en"
+hideTitle: true
 ---
-
-# Publications
 
 [Google Scholar](https://scholar.google.co.jp/citations?user=k-UzcUgAAAAJ&hl=en)
 
@@ -132,15 +131,20 @@ lang: "en"
 
 ## Other Publications
 
-1. Masashi Hamaya, **Yusaku Nakajima**.
+1. **Yusaku Nakajima**.
+   *"Quantification and Autonomization of Powder Processes in Materials Science"*
+   Jikken Igaku, Vol.44, No.8, Special Feature 2: Toward Fully Automated Research Beyond AI Utilization, May 2026.
+   [[Article]](https://www.yodosha.co.jp/jikkenigaku/articles/index.html?ci=636100)
+
+2. Masashi Hamaya, **Yusaku Nakajima**.
    *"Fundamentals of Robotic Technology"*
    In: *Material, Machine Learning, and Robotics*, Tokyo Kagaku Dojin, pp.28–36, March 2024.
 
-2. Yuto Yotsumoto, **Yusaku Nakajima**, Kanta Ono.
+3. Yuto Yotsumoto, **Yusaku Nakajima**, Kanta Ono.
    *"Autonomous Material Measurement Systems: A Case Study of Powder X-ray Diffraction"*
    In: *Material, Machine Learning, and Robotics*, Tokyo Kagaku Dojin, pp.151–154, March 2024.
 
-3. **Yusaku Nakajima**, Takafumi Hawai, Kanta Ono.
+4. **Yusaku Nakajima**, Takafumi Hawai, Kanta Ono.
    *"Challenges in Developing Autonomous Experimental Measurement Systems"*
    In: *DX for R&D Efficiency and Experimental Acceleration*, Technical Information Institute of Japan, pp.470–478, April 2022.
 
@@ -160,27 +164,28 @@ lang: "en"
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: 2rem;
   }
 
   .profile-figure {
-    flex: 1 1 300px;
+    flex: 1 1 250px;
     margin: 0;
-    text-align: center;
-    max-width: 420px;
+    max-width: 300px;
   }
 
   .profile-figure-image {
-    height: auto;
-    max-width: 420px;
+    width: 100%;
+    height: 175px;
+    object-fit: contain;
+    background: white;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   .iros-figure {
-    width: auto;
+    width: 100%;
   }
 
   .dd-figure {
@@ -189,7 +194,8 @@ lang: "en"
 
   .profile-figure figcaption {
     margin-top: 0.5rem;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
+    line-height: 1.35;
     color: rgba(var(--gray-dark), 0.8);
   }
 
@@ -202,9 +208,13 @@ lang: "en"
 
   @media (max-width: 720px) {
     .profile-figure-image {
-      height: auto;
+      height: 210px;
       width: 100%;
-      max-width: 360px;
+    }
+
+    .profile-figure {
+      flex-basis: 100%;
+      max-width: none;
     }
   }
 `}</style>

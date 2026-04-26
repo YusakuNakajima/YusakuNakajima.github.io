@@ -3,22 +3,22 @@ layout: ../layouts/PageLayout.astro
 title: "Yusaku Nakajima | Profile"
 description: "Profile and academic experience of Yusaku Nakajima."
 lang: "en"
+hideTitle: true
 ---
 
-# Profile
-
-## Yusaku Nakajima
-
-PhD Student at The University of Osaka  
-Research Trainee at Harvard Medical School, Brigham and Women's Hospital
-
-Email: yusaku_nakajima [at] ap.eng.osaka-u.ac.jp
-
-I conduct research on laboratory automation in materials science by applying mechatronics and robotics.
-My work focuses on developing experimental methodologies and autonomous systems that enable highly reproducible and precisely controlled processes, especially in experimental environments that are difficult to handle manually.
-In particular, I specialize in robotic experimental systems for powder grinding, mixing, and mechanochemical reactions.
-
-<img class="profile-photo" src="/images/profile.png" alt="Profile photo" />
+<section class="profile-intro">
+  <div class="intro-header">
+    <img class="profile-photo" src="/images/profile.png" alt="Profile photo" />
+    <div class="intro-copy">
+      <h1>Yusaku Nakajima</h1>
+      <p class="profile-role">PhD Student at The University of Osaka<br />Research Trainee at Harvard Medical School, Brigham and Women's Hospital</p>
+      <p class="profile-contact">Email: yusaku_nakajima [at] ap.eng.osaka-u.ac.jp</p>
+    </div>
+  </div>
+  <p>I conduct research on laboratory automation in materials science by applying mechatronics and robotics.</p>
+  <p>My work focuses on developing experimental methodologies and autonomous systems that enable highly reproducible and precisely controlled processes, especially in experimental environments that are difficult to handle manually.</p>
+  <p>In particular, I specialize in robotic experimental systems for powder grinding, mixing, and mechanochemical reactions.</p>
+</section>
 
 ---
 
@@ -31,13 +31,26 @@ In particular, I specialize in robotic experimental systems for powder grinding,
   Research Trainee, [Department of Radiology, Brigham and Women’s Hospital (BWH), Harvard Medical School](https://snr.spl.harvard.edu/)
 
 * **Apr. 2024 – Present**
-  Core Member, [Laboratory Automation Association of Japan](https://lasa.or.jp/en/)
+  Program Committee Member, [Laboratory Automation Association of Japan](https://lasa.or.jp/en/)
 
 * **Apr. 2021 – Mar. 2023**
   M.Eng., School of High Energy Accelerator Science, SOKENDAI (The Graduate University for Advanced Studies)
 
 * **Mar. 2021**
   B.Eng., Advanced Course in Applied Science, Asahikawa National College of Technology
+
+---
+
+## Funding Acquired
+
+* **Apr. 2026 – Present**
+  [NEDO Entrepreneurs Program (NEP), Exploration Course](https://nep.nedo.go.jp/)
+
+* **Jul. 2024 – Mar. 2025**
+  [AIST Kakusei Project](https://kakusei.aist.go.jp/)
+
+* **Apr. 2023 – Mar. 2026**
+  QLEAR: The University of Osaka Fellowship for Quantum Leaders
 
 ---
 
@@ -55,7 +68,6 @@ In particular, I specialize in robotic experimental systems for powder grinding,
 
 ## Other Links
 
-* [Publications](/publications/)
 * [ORCID](https://orcid.org/0000-0001-9926-9891)
 
 <style>{`
@@ -81,20 +93,57 @@ In particular, I specialize in robotic experimental systems for powder grinding,
     line-height: 1.6;
   }
 
+  .profile-intro {
+    margin-bottom: 2.75rem;
+  }
+
+  .intro-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-copy h1 {
+    margin-bottom: 0.35rem;
+  }
+
+  .profile-role,
+  .profile-contact {
+    margin: 0;
+  }
+
+  .profile-role {
+    color: rgba(var(--gray-dark), 0.9);
+  }
+
+  .profile-contact {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+  }
+
   .profile-photo {
     display: block;
-    height: 240px;
-    width: auto;
-    margin: 2rem auto;
-    border-radius: 8px;
+    width: 180px;
+    min-width: 180px;
+    height: 180px;
+    margin: 0;
+    border-radius: 18px;
+    object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   @media (max-width: 720px) {
+    .intro-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
     .profile-photo {
       height: auto;
       width: 100%;
-      max-width: 360px;
+      max-width: 220px;
     }
   }
 `}</style>

@@ -1,11 +1,20 @@
 ---
-import { SITE_TITLE, LINKEDIN_URL, FACEBOOK_URL, X_URL, GITHUB_URL } from '../consts';
+import { SITE_TITLE, LINKEDIN_URL, FACEBOOK_URL, X_URL, GITHUB_URL, SCHOLAR_URL } from '../consts';
 const today = new Date();
 ---
 
 <footer>
 	&copy; {today.getFullYear()} {SITE_TITLE}. All rights reserved.
 	<div class="social-links">
+		<a href={SCHOLAR_URL} target="_blank">
+			<span class="sr-only">View Google Scholar profile</span>
+			<svg viewBox="0 0 24 24" aria-hidden="true" width="32" height="32">
+				<path
+					fill="currentColor"
+					d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm-6 9.97V17c0 2.8 3.58 5 6 5s6-2.2 6-5v-4.03l-6 3.27-6-3.27z"
+				></path>
+			</svg>
+		</a>
 		<a href={LINKEDIN_URL} target="_blank">
 			<span class="sr-only">Follow on LinkedIn</span>
 			<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32">

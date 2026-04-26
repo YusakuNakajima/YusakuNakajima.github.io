@@ -4,11 +4,9 @@ import { newsItems } from '../data/news';
 type Props = {
 	lang?: 'en' | 'ja';
 	limit?: number;
-	moreHref?: string;
-	moreLabel?: string;
 };
 
-const { lang = 'en', limit, moreHref, moreLabel } = Astro.props;
+const { lang = 'en', limit } = Astro.props;
 const items = typeof limit === 'number' ? newsItems.slice(0, limit) : newsItems;
 ---
 
@@ -22,13 +20,6 @@ const items = typeof limit === 'number' ? newsItems.slice(0, limit) : newsItems;
 		))
 	}
 </ul>
-{
-	moreHref && moreLabel ? (
-		<p class="news-more">
-			<a href={moreHref}>{moreLabel}</a>
-		</p>
-	) : null
-}
 
 <style>
 	.news-list {
@@ -46,10 +37,6 @@ const items = typeof limit === 'number' ? newsItems.slice(0, limit) : newsItems;
 		min-width: 6.5rem;
 		font-weight: 700;
 		color: rgb(var(--black));
-	}
-
-	.news-more {
-		margin: 0 0 2rem;
 	}
 
 	@media (max-width: 720px) {

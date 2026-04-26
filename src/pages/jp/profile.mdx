@@ -1,23 +1,24 @@
 ---
 layout: ../../layouts/PageLayout.astro
-title: "Yusaku Nakajima | Profile"
+title: "Yusaku Nakajima | プロフィール"
 description: "中島 優作のプロフィールと研究歴です。"
 lang: "ja"
+hideTitle: true
 ---
 
-# Profile
-
-## 中島 優作 (Yusaku Nakajima)
-大阪大学 博士後期課程  
-ハーバード大学医学大学院 ブリガム・アンド・ウィメンズ病院（BWH）学生研究員
-
-**Email**: yusaku_nakajima [at] ap.eng.osaka-u.ac.jp
-
-材料科学分野において、メカトロニクスやロボティクスを応用したラボラトリーオートメーションの研究を行っています。
-従来は再現性の確保が難しかった実験プロセスに対して、高再現性かつ精密なプロセス制御を実現する実験手法や、手作業では困難な環境下での実験システムの開発に取り組んでいます。
-特に、粉体の粉砕・混合およびメカノケミカル反応を対象としたロボット実験システムの構築を専門としています。
-
-<img class="profile-photo" src="/images/profile.png" alt="プロフィール写真" />
+<section class="profile-intro">
+  <div class="intro-header">
+    <img class="profile-photo" src="/images/profile.png" alt="プロフィール写真" />
+    <div class="intro-copy">
+      <h1>中島 優作</h1>
+      <p class="profile-role">大阪大学 博士後期課程<br />ハーバード大学医学大学院 ブリガム・アンド・ウィメンズ病院（BWH）学生研究員</p>
+      <p class="profile-contact">Email: yusaku_nakajima [at] ap.eng.osaka-u.ac.jp</p>
+    </div>
+  </div>
+  <p>材料科学分野において、メカトロニクスやロボティクスを応用したラボラトリーオートメーションの研究を行っています。</p>
+  <p>従来は再現性の確保が難しかった実験プロセスに対して、高再現性かつ精密なプロセス制御を実現する実験手法や、手作業では困難な環境下での実験システムの開発に取り組んでいます。</p>
+  <p>特に、粉体の粉砕・混合およびメカノケミカル反応を対象としたロボット実験システムの構築を専門としています。</p>
+</section>
 
 ---
 
@@ -26,7 +27,7 @@ lang: "ja"
 * **2025年10月 - 現在**
   [ハーバード大学医学大学院 ブリガム・アンド・ウィメンズ病院（BWH） 放射線科](https://snr.spl.harvard.edu/) 学生研究員
 * **2024年4月 - 現在**
-  [一般社団法人ラボラトリーオートメーション協会](https://lasa.or.jp/en/) コアメンバー
+  [一般社団法人ラボラトリーオートメーション協会](https://lasa.or.jp/en/) プログラム委員
 * **2023年4月 - 現在**
   [大阪大学大学院 工学研究科 物理学系専攻 応用物理学コース](https://nano-ap.eng.osaka-u.ac.jp/index_e.html) 博士後期課程
 * **2021年4月 - 2023年3月**
@@ -34,20 +35,32 @@ lang: "ja"
 * **2021年3月**
   旭川工業高等専門学校 専攻科 応用科学専攻 学士(工学)
 
+---
+
+## 資金獲得
+
+* **2026年4月 - 現在**
+  [NEDO Entrepreneurs Program (NEP) 開拓コース](https://nep.nedo.go.jp/)
+
+* **2024年7月 - 2025年3月**
+  [産業技術総合研究所 覚醒プロジェクト](https://kakusei.aist.go.jp/)
+
+* **2023年4月 - 2026年3月**
+  QLEAR: 大阪大学フェローシップ「量子リーダー人材」
+
 ## 外部研究歴
 
 * **2024年7月 - 2025年3月**
   産業技術総合研究所 中部センター RA ([令和6年度 覚醒プロジェクト](https://kakusei.aist.go.jp/r6/)採択)
 * **2024年1月 - 2024年3月**
-  トヨタ自動車株式会社 東富士研究所 (インターンシップ)
+  トヨタ自動車株式会社 東富士研究所 (リサーチインターン)
 * **2023年1月 - 2023年3月**
-  オムロンサイニックエックス株式会社 (インターンシップ)
+  オムロンサイニックエックス株式会社 (リサーチインターン)
 
 ---
 
 ## その他リンク
 
-* [Publications](/jp/publications/)
 * [ORCID](https://orcid.org/0000-0001-9926-9891)
 
 <style>{`
@@ -73,20 +86,57 @@ lang: "ja"
     line-height: 1.6;
   }
 
+  .profile-intro {
+    margin-bottom: 2.75rem;
+  }
+
+  .intro-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-copy h1 {
+    margin-bottom: 0.35rem;
+  }
+
+  .profile-role,
+  .profile-contact {
+    margin: 0;
+  }
+
+  .profile-role {
+    color: rgba(var(--gray-dark), 0.9);
+  }
+
+  .profile-contact {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+  }
+
   .profile-photo {
     display: block;
-    height: 240px;
-    width: auto;
-    margin: 2rem auto;
-    border-radius: 8px;
+    width: 180px;
+    min-width: 180px;
+    height: 180px;
+    margin: 0;
+    border-radius: 18px;
+    object-fit: cover;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   @media (max-width: 720px) {
+    .intro-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
     .profile-photo {
       height: auto;
       width: 100%;
-      max-width: 360px;
+      max-width: 220px;
     }
   }
 `}</style>
