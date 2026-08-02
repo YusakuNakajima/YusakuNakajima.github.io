@@ -7,6 +7,20 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
 	{
+		date: 'Jul. 18, 2026',
+		dateJa: '2026年7月18日',
+		html: 'Received the “Ha” Award in AIST\'s deep-tech R&amp;D KAKUSEI Project.',
+		htmlJa:
+			'産総研のディープテック研究開発「覚醒プロジェクト」において「破」を受賞しました。',
+	},
+	{
+		date: 'Jul. 2–3, 2026',
+		dateJa: '2026年7月2日〜3日',
+		html: 'Held <a href="https://ladec2026.lasa.or.jp/en/">LADEC2026</a>, a festival of laboratory automation.',
+		htmlJa:
+			'ラボラトリーオートメーションの祭り、<a href="https://ladec2026.lasa.or.jp/">LADEC2026</a>を開催しました。',
+	},
+	{
 		date: 'Apr. 24, 2026',
 		dateJa: '2026年4月24日',
 		html: 'Selected for the NEDO Entrepreneurs Program (NEP), Exploration Course. <a href="https://nep.nedo.go.jp/kaitaku">Link</a>',
