@@ -23,14 +23,14 @@ const languageLabel = isJapanese ? 'EN' : 'JP';
 const languageAria = isJapanese ? 'Switch to English' : 'Switch to Japanese';
 const navLinks = isJapanese
 	? [
-			{ href: '/jp/', label: 'ホーム' },
+			{ href: '/jp/', label: 'ホーム', exact: true },
 			{ href: '/jp/profile/', label: 'プロフィール' },
 			{ href: '/jp/publications/', label: '研究業績' },
 			{ href: '/jp/slides/', label: '公開資料' },
 			{ href: '/jp/software/', label: 'ソフトウェア' },
 		]
 	: [
-			{ href: '/', label: 'Home' },
+			{ href: '/', label: 'Home', exact: true },
 			{ href: '/profile/', label: 'Profile' },
 			{ href: '/publications/', label: 'Publications' },
 			{ href: '/slides/', label: 'Slides' },
@@ -43,7 +43,7 @@ const navLinks = isJapanese
 		<h2><a href={homeHref}>{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			{navLinks.map((link) => (
-				<HeaderLink href={link.href}>{link.label}</HeaderLink>
+				<HeaderLink href={link.href} exact={link.exact}>{link.label}</HeaderLink>
 			))}
 		</div>
 		<div class="right-links">
