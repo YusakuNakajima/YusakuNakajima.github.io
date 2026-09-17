@@ -7,6 +7,13 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
 	{
+		date: 'Sep. 17, 2026',
+		dateJa: '2026年9月17日',
+		html: 'Selected for JST PRESTO in the research area “<a href="https://www.jst.go.jp/kisoken/presto/research_area/bunya2024-1.html">Transforming R&amp;D Processes through AI and Robotics</a>.” <a href="https://www.jst.go.jp/kisoken/presto/application/2026/260917/260917.html">Link</a>',
+		htmlJa:
+			'JSTさきがけ研究領域「<a href="https://www.jst.go.jp/kisoken/presto/research_area/bunya2024-1.html">AI・ロボットによる研究開発プロセス革新のための基盤構築と実践活用</a>」に採択されました。 <a href="https://www.jst.go.jp/kisoken/presto/application/2026/260917/260917.html">Link</a>',
+	},
+	{
 		date: 'Jul. 18, 2026',
 		dateJa: '2026年7月18日',
 		html: 'Received the “Ha” Award in AIST\'s deep-tech R&amp;D KAKUSEI Project.',
