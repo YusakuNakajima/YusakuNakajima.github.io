@@ -7,6 +7,18 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
 	{
+		date: 'Oct. 1, 2026',
+		dateJa: '2026年10月1日',
+		html: 'Joined the Department of Applied Physics, Graduate School of Engineering, The University of Osaka as an Assistant Professor.',
+		htmlJa: '大阪大学大学院 工学研究科 物理学系専攻 応用物理学コースの助教に着任しました。',
+	},
+	{
+		date: 'Sep. 25, 2026',
+		dateJa: '2026年9月25日',
+		html: 'Received a Ph.D. in Engineering from The University of Osaka.',
+		htmlJa: '大阪大学より博士(工学)の学位を授与されました。',
+	},
+	{
 		date: 'Sep. 17, 2026',
 		dateJa: '2026年9月17日',
 		html: 'Selected for JST PRESTO in the research area “<a href="https://www.jst.go.jp/kisoken/presto/research_area/bunya2024-1.html">Transforming R&amp;D Processes through AI and Robotics</a>.” <a href="https://www.jst.go.jp/kisoken/presto/application/2026/260917/260917.html">Link</a>',
