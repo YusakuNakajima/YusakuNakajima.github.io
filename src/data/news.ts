@@ -9,8 +9,8 @@ export const newsItems: NewsItem[] = [
 	{
 		date: 'Oct. 1, 2026',
 		dateJa: '2026年10月1日',
-		html: 'Joined the Department of Applied Physics, Graduate School of Engineering, The University of Osaka as an Assistant Professor.',
-		htmlJa: '大阪大学大学院 工学研究科 物理学系専攻 応用物理学コースの助教に着任しました。',
+		html: 'Joined the Department of Applied Physics, Graduate School of Engineering, The University of Osaka as an Assistant Professor. <a href="https://nano-ap.eng.osaka-u.ac.jp/member/">Link</a>',
+		htmlJa: '大阪大学大学院 工学研究科 物理学系専攻 応用物理学コースの助教に着任しました。 <a href="https://nano-ap.eng.osaka-u.ac.jp/member/">Link</a>',
 	},
 	{
 		date: 'Sep. 25, 2026',
