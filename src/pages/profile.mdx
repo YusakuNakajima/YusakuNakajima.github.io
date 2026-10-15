@@ -20,6 +20,39 @@ hideTitle: true
   <p>In particular, I specialize in robotic experimental systems for powder grinding, mixing, and mechanochemical reactions.</p>
 </section>
 
+<section class="systems">
+  <h2>Representative Systems</h2>
+  <div class="systems-grid">
+    <figure class="system-card">
+      <a href="https://doi.org/10.1109/IROS47612.2022.9981081" target="_blank" rel="noreferrer">
+        <img class="system-photo" src="/images/iros2022_fig1.jpg" alt="Robotic powder grinding system with a soft jig" />
+      </a>
+      <figcaption>
+        <strong>Powder grinding with a soft jig</strong>
+        <span class="system-credit">© 2022 IEEE. Reprinted, with permission, from Nakajima et al., IROS 2022.</span>
+      </figcaption>
+    </figure>
+    <figure class="system-card">
+      <a href="https://doi.org/10.1109/IROS55552.2023.10341526" target="_blank" rel="noreferrer">
+        <img class="system-photo" src="/images/iros2023_fig1.png" alt="Robotic powder grinding system with audio-visual feedback" />
+      </a>
+      <figcaption>
+        <strong>Grinding with audio-visual feedback</strong>
+        <span class="system-credit">© 2023 IEEE. Reprinted, with permission, from Nakajima et al., IROS 2023.</span>
+      </figcaption>
+    </figure>
+    <figure class="system-card">
+      <a href="https://doi.org/10.1039/D4DD00189C" target="_blank" rel="noreferrer">
+        <img class="system-photo" src="/images/DD2024_fig1.png" alt="Force-controlled robotic mechanochemical synthesis system" />
+      </a>
+      <figcaption>
+        <strong>Force-controlled mechanochemical synthesis</strong>
+        <span class="system-credit">From Nakajima et al., Digital Discovery, 2024. CC BY 3.0.</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 ---
 
 ## Academic Positions and Education
@@ -153,7 +186,56 @@ hideTitle: true
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
+  .systems {
+    margin-bottom: 2.75rem;
+  }
+
+  .systems h2 {
+    margin-top: 0;
+  }
+
+  .systems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .system-card {
+    margin: 0;
+  }
+
+  .system-photo {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    height: 175px;
+    object-fit: contain;
+    background: white;
+    margin: 0;
+  }
+
+  .system-card figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .system-card figcaption strong {
+    display: block;
+  }
+
+  .system-credit {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+    color: rgb(var(--gray));
+  }
+
   @media (max-width: 720px) {
+    .systems-grid {
+      grid-template-columns: 1fr;
+    }
+
     .intro-header {
       flex-direction: column;
       align-items: flex-start;
