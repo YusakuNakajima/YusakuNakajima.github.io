@@ -7,6 +7,13 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
 	{
+		date: 'Oct. 23, 2026',
+		dateJa: '2026年10月23日',
+		html: 'A paper on robotic powder grinding was published in <em>RSC Advances</em>. The robot listens to the acoustic emission generated during grinding in real time and automatically stops once the target particle size is reached. <a href="https://doi.org/10.1039/D6RA06905C">Link</a>',
+		htmlJa:
+			'ロボットによる粉体粉砕において、粉砕時に発生する音（アコースティックエミッション）をリアルタイムに計測し、狙った粒径に達した時点で粉砕を自動で止める研究が論文として出版されました。 <a href="https://doi.org/10.1039/D6RA06905C">Link</a>',
+	},
+	{
 		date: 'Oct. 1, 2026',
 		dateJa: '2026年10月1日',
 		html: 'Joined the Department of Applied Physics, Graduate School of Engineering, The University of Osaka as an Assistant Professor. <a href="https://nano-ap.eng.osaka-u.ac.jp/member/">Link</a>',
